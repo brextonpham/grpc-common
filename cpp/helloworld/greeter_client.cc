@@ -64,7 +64,7 @@ class GreeterClient {
     ClientContext context;
 
     Status status = stub_->SayHello(&context, request, &reply);
-    if (status.ok()) {
+    if (status.IsOk()) {
       return reply.message();
     } else {
       return "Rpc failed";

@@ -79,7 +79,7 @@ class GreeterClient {
     GPR_ASSERT(ok);
     GPR_ASSERT(got_tag == (void*)1);
 
-    if (status.ok()) {
+    if (status.IsOk()) {
       return reply.message();
     } else {
       return "Rpc failed";
